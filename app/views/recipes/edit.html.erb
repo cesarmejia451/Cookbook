@@ -1,0 +1,25 @@
+<h4>Update a recipe listing</h4>
+<%= form_tag "/recipes/#{@recipe.id}", method: :patch do %>
+  <div>
+    <%= label_tag :title %>
+    <%= text_field_tag :title, @recipe.title %>
+  </div>
+  <div>
+    <%= label_tag :ingredients %>
+    <%= text_field_tag :ingredients, @recipe.ingredients %>
+  </div>
+  <div>
+    <%= label_tag :directions %>
+    <%= text_field_tag :directions, @recipe.directions %>
+  </div>
+  <div>
+    <%= label_tag :image %>
+    <%= text_field_tag :image, @recipe.image %>
+  </div>
+  <div>
+    <%= label_tag :preptime %>
+    <%= text_field_tag :preptime, @recipe.preptime%>
+  </div>
+
+  <%= submit_tag "Send the update!" %>
+<% end %>

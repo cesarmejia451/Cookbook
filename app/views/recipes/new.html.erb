@@ -1,0 +1,25 @@
+<h4>Add a new recipe to the cookbook</h4>
+<%= form_tag '/recipes', method: :post do %>
+  <div>
+    <%= label_tag :title %>
+    <%= text_field_tag :title%>
+  </div>
+  
+  <div>
+    <%= label_tag :ingredients %>
+    <%= text_field_tag :ingredients %>
+  </div>
+  <div>
+    <%= label_tag :directions %>
+    <%= text_field_tag :directions %>
+  </div>
+  <div>
+    <%= label_tag :image %>
+    <%= text_field_tag :image %>
+  </div>
+  <div>
+    <%= label_tag :preptime %>
+    <%= text_field_tag :preptime %>
+  </div>
+  <%= submit_tag "Add Recipe" %>
+<% end %>
